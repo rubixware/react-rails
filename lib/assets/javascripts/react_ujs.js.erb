@@ -27,6 +27,10 @@
         return document.querySelectorAll(selector);
       }
     },
+    
+    mountOnNode: function (constructor, props, node) {
+      React.render(React.createElement(constructor, props), node);
+    },
 
     mountComponents: function(searchSelector) {
       var nodes = window.ReactRailsUJS.findDOMNodes(searchSelector);
